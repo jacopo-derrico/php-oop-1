@@ -24,7 +24,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,33 +33,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <div>
-        <h3>
-            <?= $bladeRunner->titolo ?>
-        </h3>
-        <h5>
-            <?= $bladeRunner->regista ?>
-        </h5>
-        <p>
-            Durata: <?= $bladeRunner->getHour($bladeRunner->durata) ?>
-        </p>
-    </div>
-    <div>
-        <h3>
-            <?= $bladeRunner2049->titolo ?>
-        </h3>
-        <h5>
-            <?= $bladeRunner2049->regista ?>
-        </h5>
-        <p>
-            Durata: <?= $bladeRunner2049->getHour($bladeRunner2049->durata) ?>
-        </p>
-    </div>
-    <div>
-        <div class="row">
+    <h1 class="text-center mt-3">
+        Movies
+    </h1>
+    <div class="container-fluid my-5">
+        <div class="row col-10 mx-auto gap-3">
             <?php foreach($moviesArray as $movie) : ?>
-            <div class="card" style="width: 18rem;">
-                <img src="<?= $movie->img ?>" class="card-img-top" alt="<?= $movie->titolo.' copertina' ?>">
+            <div class="card col-3 px-0 ">
+                <figure class="figure" style="height: 80%">
+                    <img src="<?= $movie->img ?>" class="img-fluid object-fit-cover" alt="<?= $movie->titolo.' copertina' ?>"
+                    style="border-radius: 0.3rem 0.3rem 0 0">
+                </figure>
                 <div class="card-body">
                     <h5 class="card-title"><?= $movie->titolo ?></h5>
                     <h6 class="card-text">
