@@ -17,8 +17,8 @@
         }
     };
 
-    $bladeRunner = new Movie('Blade Runner', 117, 'Ridley Scott', 'https://stanforddaily.com/wp-content/uploads/2017/10/Brunner1.jpeg');
-    $bladeRunner2049 = new Movie('Blade Runner 2049', 163, 'Denis Villeneuve', 'https://e-cdn-images.dzcdn.net/images/cover/87dbcce1d3c1ecf29440de6fb13686a1/500x500-000000-80-0-0.jpg');
+    $bladeRunner = new Movie('Blade Runner', 117, 'Ridley Scott', 'https://picsum.photos/400/400');
+    $bladeRunner2049 = new Movie('Blade Runner 2049', 163, 'Denis Villeneuve', 'https://picsum.photos/400/400');
     
     $moviesArray = [$bladeRunner, $bladeRunner2049];
 ?>
